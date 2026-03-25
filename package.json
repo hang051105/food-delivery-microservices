@@ -1,0 +1,13 @@
+{
+  "name": "food-delivery-microservices",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MVP microservices backend for a real-time food delivery platform",
+  "scripts": {
+    "install:all": "npm install && npm --prefix services/auth-service install && npm --prefix services/restaurant-service install && npm --prefix services/order-service install && npm --prefix services/delivery-service install && npm --prefix services/tracking-service install && npm --prefix services/notification-service install && npm --prefix services/integration-service install && npm --prefix services/api-gateway install",
+    "dev": "concurrently \"npm --prefix services/auth-service run dev\" \"npm --prefix services/restaurant-service run dev\" \"npm --prefix services/order-service run dev\" \"npm --prefix services/delivery-service run dev\" \"npm --prefix services/tracking-service run dev\" \"npm --prefix services/notification-service run dev\" \"npm --prefix services/integration-service run dev\" \"npm --prefix services/api-gateway run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
